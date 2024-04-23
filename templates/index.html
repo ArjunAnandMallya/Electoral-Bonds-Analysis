@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3s4Wz6iJgD/+ub2oU"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+      }
+
+      form {
+        margin-top: 30px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0062cc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DCC Assignment 4 - Electoral Bonds Analysis</h1>
+    <h2>Arjun Anand Mallya - 23110039</h2>
+    <form action="/search" method="GET">
+      <button type="submit">Search (Q1)</button>
+    </form>
+
+    <form action="/analyze" method="GET">
+      <button type="submit">
+        Analyze Political Party encashment data per year (Q2)
+      </button>
+    </form>
+
+    <form action="/company" method="GET">
+      <button type="submit">
+        Analyze Company or Individiual purchase data per year(Q3)
+      </button>
+    </form>
+
+    <form action="/alluvialcompany" method="GET">
+      <button type="submit">
+        Data on Political Parties that received donations from a particular
+        Individiual or Company (Q4)
+      </button>
+    </form>
+    <form action="/alluvialparty" method="GET">
+      <button type="submit">
+        Data on companies that donated to a particular political party (Q5)
+      </button>
+    </form>
+    <form action="/pi" method="GET">
+      <button type="submit">
+        Distribution of donations to parties using Pi Chart (Q6)
+      </button>
+    </form>
+    <form action="/line-chart" method="GET">
+      <button type="submit">BONUS</button>
+    </form>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz4fnFO9gybB5IXNxFwWQfE7u8Lj+XJHAxKlXiG/8rsrtpb6PEdzD828Ii"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search</title>
+  </head>
+  <body>
+    <h1>Encashment Search</h1>
+    <form method="POST" action="/search/result">
+      <label for="search_term">Search by:</label>
+      <select id="search_column" name="search_column">
+        <option value="encashed.DateofEncashment">Date of Encashment</option>
+        <option value="encashed.NameofthePoliticalParty">
+          Political Party
+        </option>
+        <option value="encashed.AccountnoofPolticalParty">Account No</option>
+        <option value="encashed.Prefix">Prefix Encashed</option>
+        <option value="encashed.BondNumber">Bond Number Encashed</option>
+        <option value="encashed.Denominations">Denominations Encashed</option>
+        <option value="encashed.PayBranchCode">Pay Branch Code</option>
+        <option value="encashed.PayTeller">Pay Teller</option>
+        <option value="purchased.ReferenceNo">ReferenceNo(URN)</option>
+        <option value="purchased.JournalDate">Journal Date</option>
+        <option value="purchased.DateofPurchase">Date of Purchase</option>
+        <option value="purchased.DateofExpiry">Date of Expiry</option>
+        <option value="purchased.NameofthePurchaser">Purchaser</option>
+        <option value="purchased.Prefix">Prefix Purchased</option>
+        <option value="purchased.BondNumber">Bond Number Purchased</option>
+        <option value="purchased.Denominations">Denominations Purchased</option>
+        <option value="purchased.IssueBranchCode">Issue Branch Code</option>
+        <option value="purchased.IssueTeller">Issue Teller</option>
+      </select>
+      <input type="text" id="search_term" name="search_term" />
+      <button type="submit">Search</button>
+    </form>
+
+    <hr />
+
+    {% if search_results %}
+    <h2>Search Results</h2>
+    <table border="1">
+      <tr>
+        <th>Sr No</th>
+        {% if selected_column in ["encashed.DateofEncashment",
+        "encashed.NameofthePoliticalParty", "encashed.AccountnoofPolticalParty",
+        "encashed.Prefix", "encashed.BondNumber", "encashed.Denominations",
+        "encashed.PayBranchCode", "encashed.PayTeller"] %}
+        <th>Date of Encashment</th>
+        <th>Political Party</th>
+        <th>Account No</th>
+        <th>Prefix Encashed</th>
+        <th>Bond Number Encashed</th>
+        <th>Denominations Encashed</th>
+        <th>Pay Branch Code</th>
+        <th>Pay Teller</th>
+        {% else %}
+        <th>Reference No</th>
+        <th>Journal Date</th>
+        <th>Date of Purchase</th>
+        <th>Date of Expiry</th>
+        <th>Purchaser</th>
+        <th>Prefix Purchased</th>
+        <th>Bond Number Purchased</th>
+        <th>Denominations Purchased</th>
+        <th>Issue Branch Code</th>
+        <th>Issue Teller</th>
+        <th>Status</th>
+        {% endif %}
+      </tr>
+      {% for result in search_results %}
+      <tr>
+        {% for value in result %}
+        <td>{{ value }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
+  </body>
+</html>
