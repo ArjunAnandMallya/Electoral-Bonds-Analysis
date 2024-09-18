@@ -1,8 +1,8 @@
-# DCC Assignment 4 - Flask
+Electoral Bonds Analysis with Flask and SQL
 
 **Name:** Arjun Anand Mallya  
 **Roll No:** 23110039  
-**Submitted on:** 23/04/24  
+ 
 
 ## Overview
 The website was created using HTML, ChartJS, CSS, JS, FLASK, Jinja, and Bootstrap.  
